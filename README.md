@@ -20,3 +20,7 @@ Our application will feature a :
 ## Dataset: 
 * Disease, symptoms and treatement:<br>
 https://www.kaggle.com/datasets/itachi9604/disease-symptom-description-dataset?select=Symptom-severity.csv </br>
+
+## Cookie Cutter
+* Structure of the project has some minor modificatios of this template :<br>
+https://drivendata.github.io/cookiecutter-data-science/
