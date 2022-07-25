@@ -7,8 +7,6 @@ mlflow
 mlflow/
 # C extensions
 *.so
-*.jpeg
-*.png
 # Distribution / packaging
 .Python
 build/
