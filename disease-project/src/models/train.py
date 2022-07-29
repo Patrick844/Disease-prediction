@@ -7,7 +7,7 @@ from src.features import Feature_engineering
 from sklearn.linear_model import LogisticRegression
 import pandas as pd
 from sklearn.svm import SVC
-
+import shap
 
 # In[7]:
 
@@ -33,6 +33,7 @@ def model_training(df):
          y_test) = Feature_engineering.pipeline(df,df_severity)
         clf = SVC(gamma='auto', C=2)
         clf.fit(x_train,y_train)
+        shap.explainer(clf.predict,x_test)
         recall, f1, precision,score = evaluation(x_test,y_test,clf)
         
         mlflow.log_param("gamma","auto")

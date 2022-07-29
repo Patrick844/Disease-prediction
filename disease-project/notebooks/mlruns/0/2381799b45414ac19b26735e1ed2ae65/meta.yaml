@@ -1,0 +1,15 @@
+artifact_uri: file:///home/patrick/Desktop/EPITA/sem3/project_management/final_project/Disease-prediction/disease-project/notebooks/mlruns/0/2381799b45414ac19b26735e1ed2ae65/artifacts
+end_time: 1659130305573
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: 2381799b45414ac19b26735e1ed2ae65
+run_uuid: 2381799b45414ac19b26735e1ed2ae65
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1659130303417
+status: 4
+tags: []
+user_id: asiam
