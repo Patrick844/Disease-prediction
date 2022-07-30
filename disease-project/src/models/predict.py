@@ -9,6 +9,7 @@ sys.path.append("..")
 import os
 import warnings
 warnings.filterwarnings("ignore")
+import glob
 
 
 # In[2]:
@@ -17,6 +18,8 @@ warnings.filterwarnings("ignore")
 import pandas as pd
 import src.features.Feature_engineering as ft
 import json
+import subprocess
+import signal
 
 
 # In[67]:
@@ -31,6 +34,7 @@ df_severity = pd.read_csv("../data/processed/Symptom-severity.csv",index_col="Sy
 
 
 def predict(df):
+
     for i in range(len(df)):
         df_t = ft.pipeline(df,df_severity)
         x = df_t.iloc[i,:].to_frame().T.to_json(orient="split")
@@ -38,7 +42,9 @@ def predict(df):
         res = os.popen('curl -X POST http://127.0.0.1:1234/invocations -H "Content-Type:application/json; format=pandas-split" --data '+ x).read()
         print("------- Patient ",i," -------")
         print("Disease :",res[2:-2])
+        
         disease_prec = df_precautions[df_precautions["Disease"]==res[2:-2]]
+        print(disease_prec)
         print(" ")
         print("------ Precautions -------")
         for col in disease_prec.columns[1:]:

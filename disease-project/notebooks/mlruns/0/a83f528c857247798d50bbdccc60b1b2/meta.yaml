@@ -1,0 +1,15 @@
+artifact_uri: file:///home/patrick/Desktop/EPITA/sem3/project_management/final_project/Disease-prediction/disease-project/notebooks/mlruns/0/a83f528c857247798d50bbdccc60b1b2/artifacts
+end_time: 1659210261933
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: a83f528c857247798d50bbdccc60b1b2
+run_uuid: a83f528c857247798d50bbdccc60b1b2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1659210260675
+status: 4
+tags: []
+user_id: patrick

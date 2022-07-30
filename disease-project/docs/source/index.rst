@@ -12,6 +12,7 @@ Welcome to disease's documentation!
    
    modules
    src
+   models
 
 
 Indices and tables

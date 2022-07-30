@@ -11,7 +11,7 @@ import os
 import sys
 sys.path.append(os.path.abspath('../..'))
 sys.path.append(os.path.abspath('..'))
-sys.path.append(os.path.abspath('../..'))
+
 sys.path.append(os.path.abspath('...'))
 sys.path.insert(0, os.path.abspath(os.path.join('..', '..', 'src/')))
 
@@ -22,7 +22,18 @@ author = 'patrick'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['sphinx.ext.autodoc', 'sphinx.ext.napoleon']
+extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.doctest',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.todo',
+    'sphinx.ext.coverage',
+    'sphinx.ext.mathjax',
+    'sphinx.ext.ifconfig',
+    'sphinx.ext.viewcode',
+    'sphinx.ext.githubpages',
+    'sphinx.ext.napoleon'
+]
 
 templates_path = ['_templates']
 exclude_patterns = []
