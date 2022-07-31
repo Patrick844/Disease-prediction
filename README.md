@@ -1,15 +1,24 @@
 # Disease
+## Team and roles: 
+* Patrick SAADE (Data engineer & Data architect)
+* Anthony SIAMPIRINGUE (Data Science Project Manager)
 
-## Users : :stethoscope:
+## Strate
+## Users: :stethoscope:
 * Medical professionals :man_health_worker:
 * Clinics / hospitals :hospital:
 * Medical devices or phone application :iphone:
 
 ## Usage Description: :anatomical_heart:
-
 After providing the necessary information to the health professionals of the user or inputting his or her personal & health information on the medical device or the Web Interface.
 Our model will use the the information provided by the user above to predict the disease that the user has 
 After that the Web interface will display a detailed result about the patient status and possible precautions, advices to visit a professional and treatement possibilities
+Our solution has a goal of diagnosing the current state of the user and providing the precautions to follow depending on the given symptoms.
+
+## Project Management Framework
+We opted to use the Waterfall framework to conduct the project because it is a software development life cycle standard and easier to apply in our team : 
+we are already fully familiar with this project management framework. This approach will give us more time to focus on the tasks and less in structuring the project with other more efficients framework but needing lot of time to learn and apply it.
+
 
 ## Features:
 Our application will feature a :
@@ -138,7 +147,13 @@ mlflow models serve –-model-uri mlruns\0\6ed33ae4cc4541a58351d3049e59c7da\arti
 
 Serving on **http://localhost:1234/**
 
-Once you have deployed the server, you can pass it some sample data and see the predictions. The following example uses curl to send a JSON-serialized pandas DataFrame with the split orientation to the model server :
+Once you have deployed the server, you can pass it some sample data and see the predictions.
+We also tried to automate the serving of the latest model built when querying predictions. 
+The attempt weren't completely successful in running 2 subprocesses in parallel.
+
+
+
+The following example uses curl to send a JSON-serialized pandas DataFrame with the split orientation to the model server :
 
 **WARNING** : this command works in Bash environment but don’t work in PowerShell, use command prompt on windows .
 
